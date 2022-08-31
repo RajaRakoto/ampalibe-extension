@@ -1,4 +1,4 @@
-const chat = {
+export const chat = {
   "[chat]: Sends an SMS to the specified recipient": {
 		"prefix": "amp-chat-sms",
 		"body": ["chat.send_message(sender_id, ${1:sms})"],

@@ -1,4 +1,4 @@
-const ui = {
+export const ui = {
   "[ui]: create button ": {
 		"prefix": "amp-chat-button",
 		"body": [

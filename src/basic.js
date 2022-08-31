@@ -1,4 +1,4 @@
-const basic = {
+export const basic = {
   "[basic]: Default function for ampalibe": {
 		"prefix": "amp-def",
 		"body": [

@@ -1,4 +1,4 @@
-const query = {
+export const query = {
   "[query]: Point to a specific route according to the argument": {
 		"prefix": "amp-query-setact",
 		"body": ["query.set_action(sender_id, ${1:'/route'})"],

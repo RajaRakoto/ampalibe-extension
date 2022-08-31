@@ -1,4 +1,4 @@
-const deps = {
+export const deps = {
   "[deps]: import quick_reply deps": {
 		"prefix": "amp-import-quickreply",
 		"body": ["from ampalibe.ui import QuickReply"],
