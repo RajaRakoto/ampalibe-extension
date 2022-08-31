@@ -1,0 +1,22 @@
+{
+    "name": "ampalibe",
+    "publisher": "iTeam-S",
+    "displayName": "Ampalibe",
+    "description": "VScode extension for Ampalibe framework",
+    "version": "0.0.1",
+    "icon": "assets/ampalibe-ico.png",
+    "engines": {
+        "vscode": "^1.70.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "python",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
