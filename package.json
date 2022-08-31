@@ -4,6 +4,7 @@
     "displayName": "Ampalibe",
     "description": "VScode extension for Ampalibe framework",
     "version": "0.0.1",
+    "type": "module",
     "icon": "assets/ampalibe-ico.png",
     "engines": {
         "vscode": "^1.70.0"
@@ -15,8 +16,12 @@
         "snippets": [
             {
                 "language": "python",
-                "path": "./snippets/snippets.code-snippets"
+                "path": "./dist/ampalibe.code-snippets"
             }
         ]
+    },
+    "devDependencies": {
+        "fs": "^0.0.1-security",
+        "traverse": "^0.6.6"
     }
 }
