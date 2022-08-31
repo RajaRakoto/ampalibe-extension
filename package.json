@@ -21,6 +21,7 @@
         ]
     },
     "devDependencies": {
+        "fs": "^0.0.1-security",
         "traverse": "^0.6.6"
     }
 }
