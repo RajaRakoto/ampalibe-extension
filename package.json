@@ -15,7 +15,7 @@
         "snippets": [
             {
                 "language": "python",
-                "path": "./snippets/snippets.code-snippets"
+                "path": "./dist/ampalibe.code-snippets"
             }
         ]
     }
