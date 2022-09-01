@@ -3,7 +3,7 @@
     "publisher": "iTeam-S",
     "displayName": "Ampalibe",
     "description": "VScode extension for Ampalibe framework",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "type": "module",
     "icon": "assets/ampalibe-ico.png",
     "engines": {
