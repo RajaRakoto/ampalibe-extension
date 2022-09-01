@@ -25,4 +25,21 @@ export const ui = {
 		],
 		"description": "[ui]: create persistent menu"
 	},
+	"[ui]: create quickreply": {
+		"prefix": "amp-ui-quickreply",
+		"body": [
+			"${1:quick_rep_name} = [",
+			"    QuickReply(",
+			"        title=${2:'Angela'},",
+			"        payload=Payload(${3:'/route'}, name=${2:'Angela'}, ref=${4:'id'})",
+			"    ),",
+			"    QuickReply(",
+			"        title=${5:'Rivo'},",
+			"        payload=Payload(${6:'/route'}, name=${5:'Rivo'}, ref=${7:'id'})",
+			"    )",
+			"]",
+			"chat.send_quick_reply(sender_id, ${1:quick_rep_name}, ${8:'Question?'})"
+		],
+		"description": "[ui]: create quickreply"
+	}
 }
