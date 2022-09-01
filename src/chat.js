@@ -4,6 +4,13 @@ export const chat = {
 		"body": ["chat.send_message(sender_id, ${1:sms})"],
 		"description": "[chat]: Sends an SMS to the specified recipient"
 	},
+	"[chat]: Sends an SMS to the specified recipient (format)": {
+		"prefix": "amp-chat-sms-format",
+		"body": [
+			"chat.send_message(sender_id, f'${1:sms_format}')"
+		],
+		"description": "[chat]: Sends an SMS to the specified recipient (format)"
+	},
 	"[chat]: create quick reply submit": {
 		"prefix": "amp-chat-qckreply",
 		"body": [
