@@ -3,6 +3,7 @@ import fs from 'fs';
 import { basic } from './src/basic.js';
 import { chat } from './src/chat.js';
 import { deps } from './src/deps.js';
+import { pattern } from './src/pattern.js'
 import { query } from './src/query.js';
 import { ui } from './src/ui.js';
 import { header, footer } from './utils/docs.js'
@@ -41,7 +42,7 @@ ${data[1][i]}
 }
 
 // snippets data
-let sourceList = [basic, chat, deps, query, ui];
+let sourceList = [basic, chat, deps, pattern, query, ui];
 let concatResult = '{';
 
 // concat snippets data
