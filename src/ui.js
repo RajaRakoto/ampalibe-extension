@@ -1,6 +1,6 @@
 export const ui = {
   "[ui]: create button ": {
-		"prefix": "amp-chat-button",
+		"prefix": "amp-ui-button",
 		"body": [
 			"${1:button_name} = [",
 			"    Button(",
@@ -15,7 +15,7 @@ export const ui = {
 		"description": "[ui]: create button "
 	},
 	"[ui]: create persistent menu": {
-		"prefix": "amp-chat-persistent",
+		"prefix": "amp-ui-persistent",
 		"body": [
 			"persistent_menu = [",
 			"    Button(type='postback', title=${1:title_value}, payload=${2:route})",
