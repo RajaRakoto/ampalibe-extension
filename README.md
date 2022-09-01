@@ -128,6 +128,22 @@ chat.send_message(sender_id, ${1:sms})
 
 <tr>
 <td>
+<strong>amp-chat-sms-format</strong>
+</td>
+<td>
+
+```python
+chat.send_message(sender_id, f'${1:sms_format}')
+```
+</td>
+<td>
+
+>[chat]: Sends an SMS to the specified recipient (format)
+</td>
+</tr>
+
+<tr>
+<td>
 <strong>amp-chat-qckreply</strong>
 </td>
 <td>
@@ -192,6 +208,67 @@ chat.send_media(sender_id, ${1:fb_url}, ${2:audio|video|file})
 
 <tr>
 <td>
+<strong>amp-import-nat-latest</strong>
+</td>
+<td>
+
+```python
+import ampalibe
+from ampalibe import Model, Messenger
+
+chat = Messenger()
+query = Model()
+
+chat.get_started()
+```
+</td>
+<td>
+
+>[deps]: version>=1.1.4 - Import the native module for ampalibe
+</td>
+</tr>
+
+<tr>
+<td>
+<strong>amp-import-nat</strong>
+</td>
+<td>
+
+```python
+import ampalibe
+from conf import Configuration
+
+bot = ampalibe.init(Configuration())
+chat = bot.chat
+query = bot.query
+
+chat.get_started()
+```
+</td>
+<td>
+
+>[deps]: version<=1.0.7 - Import the native module for ampalibe
+</td>
+</tr>
+
+<tr>
+<td>
+<strong>amp-import-config</strong>
+</td>
+<td>
+
+```python
+from conf import Configuration as config
+```
+</td>
+<td>
+
+>[deps]: Import config
+</td>
+</tr>
+
+<tr>
+<td>
 <strong>amp-import-quickreply</strong>
 </td>
 <td>
@@ -241,6 +318,37 @@ from ampalibe.ui import Element, Button
 
 <tr>
 <td>
+<strong>amp-pattern-credentials</strong>
+</td>
+<td>
+
+```python
+@ampalibe.command(${1:'/route'})
+def ${2:func_name}(sender_id, cmd, **ext):
+    chat.send_message(sender_id, ${3:'Enter your mail'})
+    query.set_action(sender_id, ${4:'/get_mail'})
+
+@ampalibe.action(${4:'/get_mail'})
+def ${5:get_mail}(sender_id, cmd, **ext):
+    query.set_temp(sender_id, 'mail', cmd)
+    chat.send_message(sender_id, ${6:'Enter your password'})
+    query.set_action(sender_id, ${7:'/get_password'})
+
+@ampalibe.action(${7:'/get_password'})
+def ${8:get_password}(sender_id, cmd, **ext):
+    query.set_action(sender_id, None)  
+    ${9:'mail'} = query.get_temp(sender_id, ${9:'mail'})
+    ${10:'password'} = cmd
+```
+</td>
+<td>
+
+>[pattern]: Generate credentials pattern
+</td>
+</tr>
+
+<tr>
+<td>
 <strong>amp-query-setact</strong>
 </td>
 <td>
@@ -273,7 +381,58 @@ query.set_action(sender_id, None)
 
 <tr>
 <td>
-<strong>amp-chat-button</strong>
+<strong>amp-query-settemp</strong>
+</td>
+<td>
+
+```python
+query.set_temp(sender_id, ${1:'data_key'}, cmd)
+
+```
+</td>
+<td>
+
+>[query]: Create/Modify temporary data
+</td>
+</tr>
+
+<tr>
+<td>
+<strong>amp-query-gettemp</strong>
+</td>
+<td>
+
+```python
+query.get_temp(sender_id, ${1:'data_key'})
+
+```
+</td>
+<td>
+
+>[query]: Get temporary data
+</td>
+</tr>
+
+<tr>
+<td>
+<strong>amp-query-deltemp</strong>
+</td>
+<td>
+
+```python
+query.del_temp(sender_id, ${1:'data_key'},)
+
+```
+</td>
+<td>
+
+>[query]: Delete temporary data
+</td>
+</tr>
+
+<tr>
+<td>
+<strong>amp-ui-button</strong>
 </td>
 <td>
 
@@ -297,7 +456,7 @@ chat.send_button(sender_id, buttons, ${3:question})
 
 <tr>
 <td>
-<strong>amp-chat-persistent</strong>
+<strong>amp-ui-persistent</strong>
 </td>
 <td>
 
