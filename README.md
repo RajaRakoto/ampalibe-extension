@@ -513,5 +513,8 @@ node ampalibe-snippets-engine.js > README.md
 ```
 - Then you can make a PR.
 
-Enjoy it 😉
+<div align="center">
+
+#### Enjoy it 😉
+</div>
 
