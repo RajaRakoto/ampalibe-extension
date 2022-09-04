@@ -3,13 +3,13 @@
 	"publisher": "iTeam-S",
 	"displayName": "Ampalibe",
 	"description": "VScode extension for Ampalibe framework",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"type": "module",
 	"icon": "assets/ampalibe-ico.png",
 	"scripts": {
 		"build": "cd utils && node ampalibe.js > ../README.md && cd ..",
 		"build-vsix": "sudo vsce package"
-    },
+	},
 	"engines": {
 		"vscode": "^1.49.0"
 	},
@@ -26,6 +26,9 @@
 	},
 	"devDependencies": {
 		"fs": "^0.0.1-security",
+		"grunt": "^1.5.3",
+		"grunt-contrib-compress": "^2.0.0",
+		"load-grunt-tasks": "^5.1.0",
 		"traverse": "^0.6.6"
 	}
 }
