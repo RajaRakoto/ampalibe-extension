@@ -1,0 +1,6 @@
+tmp
+backups
+node_modules
+.vscode/launch.json
+*.vsix
+test
