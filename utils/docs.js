@@ -37,7 +37,7 @@ It provides a new concept, it manages webhooks, processes data sent by Facebook 
 
 <br>
 
-### 📌 Extension
+### 📌 Description
 
 **Ampalibe extension** is a VScode extension that allows the user of ampalibe framework to write a snippet of code using easy to remember prefixes
 
@@ -58,12 +58,12 @@ export const footer = `
 
 ### 📌 Contribution
   
-- If you want to contribute to this project, here is a tool that will help you to generate snippets -> https://snippet-generator.app/
-- With each new code snippet added, you need to update the \`ampalibe.code-snippets\` file and regenerate the documentation, all in one command:
+🏁 With each new code snippet added, you need to update the \`ampalibe.code-snippets\` file and regenerate the documentation, all in one command (in root directory):
 \`\`\`bash
-node ampalibe-snippets-engine.js > README.md
+npm run build
 \`\`\`
-- Then you can make a PR.
+🏁 If you want to contribute to this project, here is a tool that will help you to generate snippets -> https://snippet-generator.app/
+🏁 Then you can make a PR.
 
 <div align="center">
 
