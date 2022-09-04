@@ -14,7 +14,6 @@ import { deps } from '../src/deps.js';
 import { pattern } from '../src/pattern.js';
 import { query } from '../src/query.js';
 import { ui } from '../src/ui.js';
-import { header, footer } from './docs.js';
 
 // snippets data
 let sourceList = [basic, chat, deps, pattern, query, ui];
@@ -30,7 +29,7 @@ sourceList.forEach(source => {
 concatResult = concatResult.slice(0, concatResult.length - 2) + '}}';
 
 // to ampalibe code snippets
-fs.writeFileSync('./dist/ampalibe.code-snippets', concatResult, 'utf8', err => {
+fs.writeFileSync('../dist/ampalibe.code-snippets', concatResult, 'utf8', err => {
 	console.log(err ? err : 'The file was saved!');
 });
 
@@ -39,7 +38,7 @@ let bodyList = [];
 let descriptionList = [];
 
 traverse(
-	JSON.parse(fs.readFileSync('./dist/ampalibe.code-snippets', 'utf8')),
+	JSON.parse(fs.readFileSync('../dist/ampalibe.code-snippets', 'utf8')),
 ).forEach(function (e) {
 	if (this.key == 'prefix') {
 		prefixList.push(e);
