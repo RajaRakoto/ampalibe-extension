@@ -37,15 +37,43 @@ It provides a new concept, it manages webhooks, processes data sent by Facebook 
 
 <br>
 
+
+
 ### 📌 Description
 
 **Ampalibe extension** is a VScode extension that allows the user of ampalibe framework to write a snippet of code using easy to remember prefixes
+
+
 
 ---
 
 ### 📌 Installation
 
 You can install it by typing `ampalibe` in the extension tab of your IDE
+
+
+
+---
+
+### 📌 Contribution
+
+🏁 Before contributing, be sure to `install all dependencies` needed to work in this project by running the following command (in root directory):
+```bash
+npm install
+```
+🏁 With each new code snippet added, you need to update the `ampalibe.code-snippets` file and regenerate the documentation, all in one command (in root directory):
+```bash
+npm run build
+```
+🏁 You can run a `grunt task` to make a `local backup` of this project by running the following command (in root directory):
+```bash
+grunt compress-all
+```
+🏁 Here is a tool that will help you to generate snippets -> https://snippet-generator.app/
+
+🏁 Then you can make a PR.
+
+
 
 ---
 
@@ -502,16 +530,6 @@ chat.send_quick_reply(sender_id, ${1:quick_rep_name}, ${8:'Question?'})
 
 </table>
 
----
-
-### 📌 Contribution
-  
-🏁 With each new code snippet added, you need to update the `ampalibe.code-snippets` file and regenerate the documentation, all in one command (in root directory):
-```bash
-npm run build
-```
-🏁 If you want to contribute to this project, here is a tool that will help you to generate snippets -> https://snippet-generator.app/
-🏁 Then you can make a PR.
 
 <div align="center">
 
