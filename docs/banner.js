@@ -1,4 +1,4 @@
-export const header = `
+export const banner = `
 <p align="center"> <img height="300" src="https://github.com/iTeam-S/Ampalibe/raw/main/docs/source/_static/ampalibe_logo.png"/></p>
 <div align="center">
  <h4>
@@ -37,36 +37,4 @@ It provides a new concept, it manages webhooks, processes data sent by Facebook 
 
 <br>
 
-### 📌 Description
-
-**Ampalibe extension** is a VScode extension that allows the user of ampalibe framework to write a snippet of code using easy to remember prefixes
-
----
-
-### 📌 Installation
-
-You can install it by typing \`ampalibe\` in the extension tab of your IDE
-
----
-
-### 📌 Usage
-
-`;
-
-export const footer = `
----
-
-### 📌 Contribution
-  
-🏁 With each new code snippet added, you need to update the \`ampalibe.code-snippets\` file and regenerate the documentation, all in one command (in root directory):
-\`\`\`bash
-npm run build
-\`\`\`
-🏁 If you want to contribute to this project, here is a tool that will help you to generate snippets -> https://snippet-generator.app/
-🏁 Then you can make a PR.
-
-<div align="center">
-
-#### Enjoy it 😉
-</div>
-`;
+`

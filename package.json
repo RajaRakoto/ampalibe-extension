@@ -1,30 +1,31 @@
 {
-    "name": "ampalibe",
-    "publisher": "iTeam-S",
-    "displayName": "Ampalibe",
-    "description": "VScode extension for Ampalibe framework",
-    "version": "1.0.4",
-    "type": "module",
-    "icon": "assets/ampalibe-ico.png",
-    "scripts": {
-		"build": "node ampalibe-snippets-engine.js > README.md"
+	"name": "ampalibe",
+	"publisher": "iTeam-S",
+	"displayName": "Ampalibe",
+	"description": "VScode extension for Ampalibe framework",
+	"version": "1.0.4",
+	"type": "module",
+	"icon": "assets/ampalibe-ico.png",
+	"scripts": {
+		"build": "cd utils && node ampalibe.js > ../README.md && cd ..",
+		"build-vsix": "sudo vsce package"
+    },
+	"engines": {
+		"vscode": "^1.49.0"
 	},
-    "engines": {
-        "vscode": "^1.49.0"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "python",
-                "path": "./dist/ampalibe.code-snippets"
-            }
-        ]
-    },
-    "devDependencies": {
-        "fs": "^0.0.1-security",
-        "traverse": "^0.6.6"
-    }
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "python",
+				"path": "./dist/ampalibe.code-snippets"
+			}
+		]
+	},
+	"devDependencies": {
+		"fs": "^0.0.1-security",
+		"traverse": "^0.6.6"
+	}
 }
