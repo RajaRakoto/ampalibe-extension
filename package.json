@@ -1,0 +1,68 @@
+{
+  "name": "my-extension",
+  "displayName": "My extension",
+  "version": "1.0.0",
+  "description": "Minimalistic boilerplate to quick-start VSCode Extension development 🚀",
+  "publisher": "raja",
+  "author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
+  "license": "MIT",
+  "icon": "./assets/vscode-extension.png",
+  "readme": "./README.md",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajaRakoto/vscode-boilerplate.git"
+  },
+  "homepage": "https://github.com/RajaRakoto/vscode-boilerplate#readme",
+  "bugs": "https://github.com/RajaRakoto/vscode-boilerplate/issues",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "extension",
+    "vscode"
+  ],
+  "engines": {
+    "vscode": "^1.39.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "scripts": {
+    "es6": "bun es6.js",
+    "clean": "rimraf build dist coverage",
+    "build": "bun run clean && bun build.js && vsce package && mv my-*.vsix dist",
+    "prettier": "prettier --config .prettierrc --write .",
+    "eslint": "eslint . --ext js,cjs,mjs --report-unused-disable-directives --max-warnings 0",
+    "backup": "grunt backup",
+    "pkg-check": "depcheck",
+    "pkg-upgrade": "ncu --interactive --format group --packageManager bun",
+    "versioning": "ungit",
+    "npm-version:major": "npm version major",
+    "npm-version:minor": "npm version minor",
+    "npm-version:patch": "npm version patch"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./dist/my-extension.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./dist/my-extension.code-snippets"
+      }
+    ]
+  },
+  "devDependencies": {
+      "depcheck": "^1.4.7",
+      "eslint": "^8.57.0",
+      "eslint-config-prettier": "^9.1.0",
+      "grunt": "^1.6.1",
+      "grunt-contrib-compress": "^2.0.0",
+      "load-grunt-tasks": "^5.1.0",
+      "npm-check-updates": "^16.14.15",
+      "prettier": "^3.2.5",
+      "rimraf": "^5.0.5"
+  }
+}
