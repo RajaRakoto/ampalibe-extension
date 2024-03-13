@@ -90,12 +90,19 @@ typings
 
 # own
 .gitignore
+.eslintignore
+.eslintrc
 .prettierignore
 .prettierrc
-backups
-tmp
-bun.lockb
-gruntfile.cjs
 LICENSE
 README.md
+bun.lockb
+build.js
+gruntfile.cjs
 package.json
+backups
+tmp
+
+
+
+
