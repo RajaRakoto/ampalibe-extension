@@ -20,7 +20,12 @@
   ],
   "keywords": [
     "extension",
-    "vscode"
+    "vscode",
+    "javascript",
+    "minimalist",
+    "boilerplate",
+    "template",
+    "starter"
   ],
   "engines": {
     "vscode": "^1.39.0"
