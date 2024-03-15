@@ -16,7 +16,7 @@ Visual Studio Code supports a wide range of extensions that can enhance your dev
 
 ---
 
-### 📌 Scripts
+### 📌 NPM Scripts
 
 **Util**
 
@@ -29,6 +29,10 @@ Visual Studio Code supports a wide range of extensions that can enhance your dev
 **Build**
 
 - 📜 `build` - Run the build.js script and utilize vsce to generate the vsix file for production
+
+**Testing**
+
+- 📜 `test` - Run unit testing with Bun.js.
 
 **Linting and Formatting**
 
