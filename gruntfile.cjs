@@ -1,5 +1,5 @@
 /**
- * @description: gruntfile for my extension
+ * @description: gruntfile for vscode boilerplate
  * @requires: grunt | load-grunt-tasks | grunt-contrib-compress
  */
 module.exports = function (grunt) {
@@ -116,7 +116,7 @@ module.exports = function (grunt) {
 
     // task resume
     getTaskResume(
-      '== MY EXTENSION TASKS ==',
+      '== VSCODE BOILERPLATE TASKS ==',
       plumTaskNames,
       plumTaskStatus,
       'yellow',
