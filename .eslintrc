@@ -7,10 +7,15 @@
   "parserOptions": {
     "project": "tsconfig.json",
     "sourceType": "module",
-    "ecmaVersion": 2020
+    "ecmaVersion": "latest"
   },
   "extends": [
     "eslint:recommended",
     "prettier"
+  ],
+  "overrides": [
+    {
+      "files": ["*.{js,cjs,mjs}"]
+    }
   ]
 }
