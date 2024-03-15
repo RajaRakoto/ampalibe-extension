@@ -24,6 +24,15 @@ module.exports = function (grunt) {
         files: [{ src: ['./*', './.*'] }],
         filter: 'isFile',
       },
+      vscode: {
+        options: {
+          archive: backupsDestination + 'vscode.tar.gz',
+        },
+        expand: true,
+        cwd: './.vscode/',
+        src: includeAllFiles,
+        dest: 'vscode',
+      },
       assets: {
         options: {
           archive: backupsDestination + 'assets.tar.gz',
@@ -42,6 +51,15 @@ module.exports = function (grunt) {
         src: includeAllFiles,
         dest: 'src',
       },
+      tests: {
+        options: {
+          archive: backupsDestination + 'tests.tar.gz',
+        },
+        expand: true,
+        cwd: './tests/',
+        src: includeAllFiles,
+        dest: 'tests',
+      },
       tmp: {
         options: {
           archive: backupsDestination + 'tmp.tar.gz',
@@ -57,15 +75,17 @@ module.exports = function (grunt) {
   // all grunt register tasks
   grunt.registerTask('backup', [
     'compress:main',
+    'compress:vscode',
     'compress:assets',
     'compress:src',
+    'compress:tests',
     'compress:tmp',
   ])
 
   // all tasks lists
   const plumTaskNames = ['backup']
   const plumTaskStatus = [
-    'compress: main | assets | src | tmp',
+    'compress: main | vscode | assets | src | tests | tmp',
   ]
 
   // default tasks
