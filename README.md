@@ -4,7 +4,7 @@
 
 **This minimalistic boilerplate is designed to help you quickly start developing extensions for Visual Studio Code. It provides a solid and ready-to-use base structure, allowing you to focus on implementing your unique features without wasting time setting up the development environment.**
 
-**Usage**: You can install it by typing "My extension" in the extension tab of your IDE
+**IDE**: You can install it by typing "My extension" in the extension tab of your IDE
 
 ---
 
@@ -13,6 +13,24 @@
 Visual Studio Code supports a wide range of extensions that can enhance your development experience in various ways. While this boilerplate is specifically tailored for creating `VSCode snippets`, it's important to note that there are several other types of extensions you can develop, such as language support, debugging tools, extension pack and more ... If you're interested in creating a different type of extension, you might need to adjust the template provided in this boilerplate. This could involve changing the `package.json` file, modifying source code to implement the desired functionality, and potentially adding new dependencies or scripts to your project.
 
 > For more information, you can refer to the [VSCode Extension API](https://code.visualstudio.com/api/get-started/your-first-extension).
+
+---
+
+### 📌 Usage
+
+To use this template, use the following commands:
+
+```bash
+bun create github.com/RajaRakoto/vscode-boilerplate <project-name>
+cd <project-name>
+bun run pkg-upgrade # to upgrade outdated dependencies in interactive mode
+```
+
+> NOTE 1: I employ the `MIT license` for this starter kit, which includes my name and GitHub profile. Please remember to adjust or remove it if deemed unnecessary.
+
+> NOTE 2: In order to help you better understand the structure of this boilerplate, there is a `README.md` file in each subdirectory of src.
+
+> NOTE 3: For certain configurations in the `package.json` file, you need to modify them to tailor them to your project (e.g: name, description, author, keywords, main, repository, ...).
 
 ---
 
