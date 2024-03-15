@@ -40,10 +40,6 @@ lib-cov
 .lock-wscript
 
 # editor
-.vscode
-!.vscode/tasks.js
-!.vscode/extensions.json
-.vscode-test
 .idea
 .DS_Store
 *.suo
