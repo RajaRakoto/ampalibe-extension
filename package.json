@@ -46,7 +46,8 @@
     "versioning": "ungit",
     "npm-version:major": "npm version major",
     "npm-version:minor": "npm version minor",
-    "npm-version:patch": "npm version patch"
+    "npm-version:patch": "npm version patch",
+    "nvm": "nvm use"
   },
   "contributes": {
     "snippets": [
