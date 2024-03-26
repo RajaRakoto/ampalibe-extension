@@ -6,7 +6,6 @@
 
 **IDE**: You can install it by typing "My extension" in the extension tab of your IDE
 
-
 Instant Value - All basic tools included and configured:
 
 - 🧅 Bun.js >= 1.0.26
