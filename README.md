@@ -6,6 +6,23 @@
 
 **IDE**: You can install it by typing "My extension" in the extension tab of your IDE
 
+
+Instant Value - All basic tools included and configured:
+
+- 🧅 Bun.js >= 1.0.26
+- 🧅 Use Bun as package manager
+- 🌈 ESM
+- 🧹 ESlint with some initial rules recommendation
+- ✅ Jest or Bun test for fast unit testing and code coverage
+- 🎨 Prettier to enforce consistent code style
+- ⚙️ EditorConfig for consistent coding style
+- 📦 NPM scripts for common operations
+- 📝 Best package.json configuration for VSCode extension
+- 📝 Simple example of Snippet code and unit test
+- 🐗 Run tasks with Grunt (example for backup)
+- 🚄 Build faster with a preconfigured file and VSCE tool
+- 🖥️ Ungit for version control (git) with a GUI
+
 ---
 
 ### 📌 Notes
@@ -67,11 +84,15 @@ bun run pkg-upgrade # to upgrade outdated dependencies in interactive mode
 
 - 📜 `versioning` - Start ungit server.
 
-**npm Commands**
+**NPM Commands**
 
 - 📜 `npm-version:major` - Increments the major version number of your project using npm.
 - 📜 `npm-version:minor` - Increments the minor version number of your project using npm.
 - 📜 `npm-version:patch` - Increments the version patch number of your project using npm.
+
+**NVM**
+
+- 📜 `nvm` - Manage multiple node.js versions. Easily switch between node versions per project to ensure compatibility.
 
 ---
 
@@ -83,5 +104,5 @@ You can also check out my other starter projects:
 - 🚀 [node-boilerplate](https://github.com/RajaRakoto/node-boilerplate)
 - 🚀 [react-boilerplate](https://github.com/RajaRakoto/react-boilerplate)
 - 🚀 [next-boilerplate](https://github.com/RajaRakoto/next-boilerplate)
-- 🚀 [quik-boilerplate](https://github.com/RajaRakoto/quik-boilerplate)
+- 🚀 [qwik-boilerplate](https://github.com/RajaRakoto/qwik-boilerplate)
 - 🚀 [cli-boilerplate](https://github.com/RajaRakoto/cli-boilerplate)
