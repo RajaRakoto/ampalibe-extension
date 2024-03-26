@@ -17,5 +17,8 @@
     {
       "files": ["*.{js,cjs,mjs}"]
     }
-  ]
+  ],
+  "rules": {
+    "no-unused-vars": "warn"
+  }
 }
