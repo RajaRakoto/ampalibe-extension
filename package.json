@@ -1,7 +1,7 @@
 {
   "name": "ampalibe",
   "displayName": "Ampalibe",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "VScode extension for Ampalibe framework 🥝",
   "publisher": "iTeam-S",
   "author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
@@ -36,19 +36,19 @@
   "scripts": {
     "script:es6": "bun es6.js",
     "script:table": "bun table.js > table",
-		"clean": "rimraf build dist coverage",
-		"build": "bun run clean && bun build.js && vsce package && mv ampalibe-*.vsix dist",
-		"test": "bun test",
-		"eslint": "eslint --config .eslintrc --report-unused-disable-directives --max-warnings 0",
-		"prettier": "prettier --config .prettierrc --write .",
-		"backup": "grunt backup",
-		"pkg-check": "depcheck",
-		"pkg-upgrade": "ncu --interactive --format group --packageManager bun",
-		"versioning": "ungit",
-		"npm-version:major": "npm version major",
-		"npm-version:minor": "npm version minor",
-		"npm-version:patch": "npm version patch",
-		"nvm": "nvm use"
+    "clean": "rimraf build dist coverage",
+    "build": "bun run clean && bun build.js && vsce package && mv ampalibe-*.vsix dist",
+    "test": "bun test",
+    "eslint": "eslint --config .eslintrc --report-unused-disable-directives --max-warnings 0",
+    "prettier": "prettier --config .prettierrc --write .",
+    "backup": "grunt backup",
+    "pkg-check": "depcheck",
+    "pkg-upgrade": "ncu --interactive --format group --packageManager bun",
+    "versioning": "ungit",
+    "npm-version:major": "npm version major",
+    "npm-version:minor": "npm version minor",
+    "npm-version:patch": "npm version patch",
+    "nvm": "nvm use"
   },
   "contributes": {
     "snippets": [
