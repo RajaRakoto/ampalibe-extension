@@ -3,12 +3,12 @@ import fs from "fs";
 import path from "path";
 
 /* src snippets sources */
-import { basic } from './src/basic.js';
-import { chat } from './src/chat.js';
-import { deps } from './src/deps.js';
-import { pattern } from './src/pattern.js';
-import { query } from './src/query.js';
-import { ui } from './src/ui.js';
+import { basic } from "./src/basic.js";
+import { chat } from "./src/chat.js";
+import { deps } from "./src/deps.js";
+import { pattern } from "./src/pattern.js";
+import { query } from "./src/query.js";
+import { ui } from "./src/ui.js";
 
 // ========================================
 
@@ -36,4 +36,7 @@ const json = JSON.stringify(concatenedSnippets);
 // write to file
 const distDirectory = "./dist";
 ensureDirectoryExists(distDirectory);
-fs.writeFileSync(path.join(distDirectory, "ampalibe-extension.code-snippets"), json);
+fs.writeFileSync(
+	path.join(distDirectory, "ampalibe-extension.code-snippets"),
+	json,
+);

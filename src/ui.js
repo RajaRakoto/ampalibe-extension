@@ -1,7 +1,7 @@
 export const ui = {
-  "[ui]: create button ": {
-		"prefix": "amp-ui-button",
-		"body": [
+	"[ui]: create button ": {
+		prefix: "amp-ui-button",
+		body: [
 			"${1:button_name} = [",
 			"    Button(",
 			"        type='postback',",
@@ -10,24 +10,24 @@ export const ui = {
 			"    )",
 			"]",
 			"",
-			"chat.send_button(sender_id, buttons, ${3:question})"
+			"chat.send_button(sender_id, buttons, ${3:question})",
 		],
-		"description": "[ui]: create button "
+		description: "[ui]: create button ",
 	},
 	"[ui]: create persistent menu": {
-		"prefix": "amp-ui-persistent",
-		"body": [
+		prefix: "amp-ui-persistent",
+		body: [
 			"persistent_menu = [",
 			"    Button(type='postback', title=${1:title_value}, payload=${2:route})",
 			"]",
 			"",
-			"chat.persistent_menu(sender_id, persistent_menu)"
+			"chat.persistent_menu(sender_id, persistent_menu)",
 		],
-		"description": "[ui]: create persistent menu"
+		description: "[ui]: create persistent menu",
 	},
 	"[ui]: create quickreply": {
-		"prefix": "amp-ui-quickreply",
-		"body": [
+		prefix: "amp-ui-quickreply",
+		body: [
 			"${1:quick_rep_name} = [",
 			"    QuickReply(",
 			"        title=${2:'Angela'},",
@@ -38,8 +38,8 @@ export const ui = {
 			"        payload=Payload(${6:'/route'}, name=${5:'Rivo'}, ref=${7:'id'})",
 			"    )",
 			"]",
-			"chat.send_quick_reply(sender_id, ${1:quick_rep_name}, ${8:'Question?'})"
+			"chat.send_quick_reply(sender_id, ${1:quick_rep_name}, ${8:'Question?'})",
 		],
-		"description": "[ui]: create quickreply"
-	}
-}
+		description: "[ui]: create quickreply",
+	},
+};

@@ -1,74 +1,74 @@
 {
-  "name": "ampalibe",
-  "displayName": "Ampalibe",
-  "version": "1.0.6",
-  "description": "VScode extension for Ampalibe framework 🥝",
-  "publisher": "iTeam-S",
-  "author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
-  "license": "MIT",
-  "icon": "./assets/ampalibe-extension.png",
-  "readme": "./README.md",
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RajaRakoto/ampalibe-extension.git"
-  },
-  "homepage": "https://github.com/RajaRakoto/ampalibe-extension#readme",
-  "bugs": "https://github.com/RajaRakoto/ampalibe-extension/issues",
-  "files": [
-    "dist"
-  ],
-  "keywords": [
-    "ampalibe",
-    "extension",
-    "vscode",
-    "snippets",
-    "bot",
-    "chatbot",
-    "messenger"
-  ],
-  "engines": {
-    "vscode": "^1.39.0"
-  },
-  "categories": [
-    "Snippets"
-  ],
-  "scripts": {
-    "script:es6": "bun es6.js",
-    "script:table": "bun table.js > table",
-    "clean": "rimraf build dist coverage",
-    "build": "bun run clean && bun build.js && vsce package && mv ampalibe-*.vsix dist",
-    "test": "bun test",
-    "eslint": "eslint --config .eslintrc --report-unused-disable-directives --max-warnings 0",
-    "prettier": "prettier --config .prettierrc --write .",
-    "backup": "grunt backup",
-    "pkg-check": "depcheck",
-    "pkg-upgrade": "ncu --interactive --format group --packageManager bun",
-    "versioning": "ungit",
-    "npm-version:major": "npm version major",
-    "npm-version:minor": "npm version minor",
-    "npm-version:patch": "npm version patch",
-    "nvm": "nvm use"
-  },
-  "contributes": {
-    "snippets": [
-      {
-        "language": "python",
-        "path": "./dist/ampalibe-extension.code-snippets"
-      }
-    ]
-  },
-  "devDependencies": {
-    "depcheck": "^1.4.7",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "fs": "^0.0.1-security",
-    "grunt": "^1.6.1",
-    "grunt-contrib-compress": "^2.0.0",
-    "load-grunt-tasks": "^5.1.0",
-    "npm-check-updates": "^16.14.18",
-    "prettier": "^3.2.5",
-    "rimraf": "^5.0.5",
-    "traverse": "^0.6.8"
-  }
+	"name": "ampalibe",
+	"displayName": "Ampalibe",
+	"version": "1.0.6",
+	"description": "VScode extension for Ampalibe framework 🥝",
+	"publisher": "iTeam-S",
+	"author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
+	"license": "MIT",
+	"icon": "./assets/ampalibe-extension.png",
+	"readme": "./README.md",
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RajaRakoto/ampalibe-extension.git"
+	},
+	"homepage": "https://github.com/RajaRakoto/ampalibe-extension#readme",
+	"bugs": "https://github.com/RajaRakoto/ampalibe-extension/issues",
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"ampalibe",
+		"extension",
+		"vscode",
+		"snippets",
+		"bot",
+		"chatbot",
+		"messenger"
+	],
+	"engines": {
+		"vscode": "^1.39.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"scripts": {
+		"script:es6": "bun es6.js",
+		"script:table": "bun table.js > table",
+		"clean": "rimraf build dist coverage",
+		"build": "bun run clean && bun build.js && vsce package && mv ampalibe-*.vsix dist",
+		"test": "bun test",
+		"eslint": "eslint --config .eslintrc --report-unused-disable-directives --max-warnings 0",
+		"prettier": "prettier --config .prettierrc --write .",
+		"backup": "grunt backup",
+		"pkg-check": "depcheck",
+		"pkg-upgrade": "ncu --interactive --format group --packageManager bun",
+		"versioning": "ungit",
+		"npm-version:major": "npm version major",
+		"npm-version:minor": "npm version minor",
+		"npm-version:patch": "npm version patch",
+		"nvm": "nvm use"
+	},
+	"contributes": {
+		"snippets": [
+			{
+				"language": "python",
+				"path": "./dist/ampalibe-extension.code-snippets"
+			}
+		]
+	},
+	"devDependencies": {
+		"depcheck": "^1.4.7",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^9.1.0",
+		"fs": "^0.0.1-security",
+		"grunt": "^1.6.1",
+		"grunt-contrib-compress": "^2.0.0",
+		"load-grunt-tasks": "^5.1.0",
+		"npm-check-updates": "^16.14.18",
+		"prettier": "^3.2.5",
+		"rimraf": "^5.0.5",
+		"traverse": "^0.6.8"
+	}
 }

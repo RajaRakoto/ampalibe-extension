@@ -1,4 +1,3 @@
-
 # ampalibe-extension 🥝
 
 ![Git](https://img.shields.io/badge/-Git-777?style=flat&logo=git&logoColor=F05032&labelColor=ffffff) ![Gitub](https://img.shields.io/badge/-Gitub-777?style=flat&logo=github&logoColor=777&labelColor=ffffff)
@@ -24,10 +23,12 @@
 def ${1:func_name}(sender_id, cmd, **extends):
   ${2:code...}
 ```
+
 </td>
 <td>
 
->[basic]: Default function for ampalibe
+> [basic]: Default function for ampalibe
+
 </td>
 </tr>
 
@@ -42,10 +43,12 @@ def ${1:func_name}(sender_id, cmd, **extends):
 def ${2:func_name}(sender_id, cmd, **extends):
   ${3:code...}
 ```
+
 </td>
 <td>
 
->[basic]: Create ampalibe command
+> [basic]: Create ampalibe command
+
 </td>
 </tr>
 
@@ -60,10 +63,12 @@ def ${2:func_name}(sender_id, cmd, **extends):
 def ${2:func_name}(sender_id, cmd, **extends):
   ${3:code...}
 ```
+
 </td>
 <td>
 
->[basic]: Create ampalibe action
+> [basic]: Create ampalibe action
+
 </td>
 </tr>
 
@@ -76,10 +81,12 @@ def ${2:func_name}(sender_id, cmd, **extends):
 ```python
 chat.send_message(sender_id, ${1:sms})
 ```
+
 </td>
 <td>
 
->[chat]: Sends an SMS to the specified recipient
+> [chat]: Sends an SMS to the specified recipient
+
 </td>
 </tr>
 
@@ -92,10 +99,12 @@ chat.send_message(sender_id, ${1:sms})
 ```python
 chat.send_message(sender_id, f'${1:sms_format}')
 ```
+
 </td>
 <td>
 
->[chat]: Sends an SMS to the specified recipient (format)
+> [chat]: Sends an SMS to the specified recipient (format)
+
 </td>
 </tr>
 
@@ -108,10 +117,12 @@ chat.send_message(sender_id, f'${1:sms_format}')
 ```python
 chat.send_quick_reply(sender_id, ${1:responses_buttons}, ${2:question})
 ```
+
 </td>
 <td>
 
->[chat]: create quick reply submit
+> [chat]: create quick reply submit
+
 </td>
 </tr>
 
@@ -124,10 +135,12 @@ chat.send_quick_reply(sender_id, ${1:responses_buttons}, ${2:question})
 ```python
 chat.send_file(sender_id, ${1:local_path}, filetype=${2:audio|video|file})
 ```
+
 </td>
 <td>
 
->[chat]: send local file to user
+> [chat]: send local file to user
+
 </td>
 </tr>
 
@@ -140,10 +153,12 @@ chat.send_file(sender_id, ${1:local_path}, filetype=${2:audio|video|file})
 ```python
 chat.send_file_url(sender_id, ${1:url}, filetype=${2:audio|video|file})
 ```
+
 </td>
 <td>
 
->[chat]: send URL file to user
+> [chat]: send URL file to user
+
 </td>
 </tr>
 
@@ -156,10 +171,12 @@ chat.send_file_url(sender_id, ${1:url}, filetype=${2:audio|video|file})
 ```python
 chat.send_media(sender_id, ${1:fb_url}, ${2:audio|video|file})
 ```
+
 </td>
 <td>
 
->[chat]: send facebook file to user
+> [chat]: send facebook file to user
+
 </td>
 </tr>
 
@@ -178,10 +195,12 @@ query = Model()
 
 chat.get_started()
 ```
+
 </td>
 <td>
 
->[deps]: version>=1.1.4 - Import the native module for ampalibe
+> [deps]: version>=1.1.4 - Import the native module for ampalibe
+
 </td>
 </tr>
 
@@ -201,10 +220,12 @@ query = bot.query
 
 chat.get_started()
 ```
+
 </td>
 <td>
 
->[deps]: version<=1.0.7 - Import the native module for ampalibe
+> [deps]: version<=1.0.7 - Import the native module for ampalibe
+
 </td>
 </tr>
 
@@ -217,10 +238,12 @@ chat.get_started()
 ```python
 from conf import Configuration as config
 ```
+
 </td>
 <td>
 
->[deps]: Import config
+> [deps]: Import config
+
 </td>
 </tr>
 
@@ -233,10 +256,12 @@ from conf import Configuration as config
 ```python
 from ampalibe.ui import QuickReply
 ```
+
 </td>
 <td>
 
->[deps]: import quick reply deps
+> [deps]: import quick reply deps
+
 </td>
 </tr>
 
@@ -249,10 +274,12 @@ from ampalibe.ui import QuickReply
 ```python
 from ampalibe.ui import Button
 ```
+
 </td>
 <td>
 
->[deps]: import button deps
+> [deps]: import button deps
+
 </td>
 </tr>
 
@@ -266,10 +293,12 @@ from ampalibe.ui import Button
 from ampalibe import Payload
 from ampalibe.ui import Element, Button
 ```
+
 </td>
 <td>
 
->[deps]: import send_template deps
+> [deps]: import send_template deps
+
 </td>
 </tr>
 
@@ -293,14 +322,16 @@ def ${5:get_mail}(sender_id, cmd, **ext):
 
 @ampalibe.action(${7:'/get_password'})
 def ${8:get_password}(sender_id, cmd, **ext):
-    query.set_action(sender_id, None)  
+    query.set_action(sender_id, None)
     ${9:'mail'} = query.get_temp(sender_id, ${9:'mail'})
     ${10:'password'} = cmd
 ```
+
 </td>
 <td>
 
->[pattern]: Generate credentials pattern
+> [pattern]: Generate credentials pattern
+
 </td>
 </tr>
 
@@ -313,10 +344,12 @@ def ${8:get_password}(sender_id, cmd, **ext):
 ```python
 query.set_action(sender_id, ${1:'/route'})
 ```
+
 </td>
 <td>
 
->[query]: Points to a specific route according to the argument
+> [query]: Points to a specific route according to the argument
+
 </td>
 </tr>
 
@@ -329,10 +362,12 @@ query.set_action(sender_id, ${1:'/route'})
 ```python
 query.set_action(sender_id, None)
 ```
+
 </td>
 <td>
 
->[query]: Point action to null
+> [query]: Point action to null
+
 </td>
 </tr>
 
@@ -346,10 +381,12 @@ query.set_action(sender_id, None)
 query.set_temp(sender_id, ${1:'data_key'}, cmd)
 
 ```
+
 </td>
 <td>
 
->[query]: Create/Modify temporary data
+> [query]: Create/Modify temporary data
+
 </td>
 </tr>
 
@@ -363,10 +400,12 @@ query.set_temp(sender_id, ${1:'data_key'}, cmd)
 query.get_temp(sender_id, ${1:'data_key'})
 
 ```
+
 </td>
 <td>
 
->[query]: Get temporary data
+> [query]: Get temporary data
+
 </td>
 </tr>
 
@@ -380,10 +419,12 @@ query.get_temp(sender_id, ${1:'data_key'})
 query.del_temp(sender_id, ${1:'data_key'},)
 
 ```
+
 </td>
 <td>
 
->[query]: Delete temporary data
+> [query]: Delete temporary data
+
 </td>
 </tr>
 
@@ -404,10 +445,12 @@ ${1:button_name} = [
 
 chat.send_button(sender_id, buttons, ${3:question})
 ```
+
 </td>
 <td>
 
->[ui]: create button 
+> [ui]: create button
+
 </td>
 </tr>
 
@@ -424,10 +467,12 @@ persistent_menu = [
 
 chat.persistent_menu(sender_id, persistent_menu)
 ```
+
 </td>
 <td>
 
->[ui]: create persistent menu
+> [ui]: create persistent menu
+
 </td>
 </tr>
 
@@ -450,12 +495,13 @@ ${1:quick_rep_name} = [
 ]
 chat.send_quick_reply(sender_id, ${1:quick_rep_name}, ${8:'Question?'})
 ```
+
 </td>
 <td>
 
->[ui]: create quickreply
+> [ui]: create quickreply
+
 </td>
 </tr>
 
 </table>
-
