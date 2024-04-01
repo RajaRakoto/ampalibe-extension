@@ -64,7 +64,6 @@
     "load-grunt-tasks": "^5.1.0",
     "npm-check-updates": "^16.14.18",
     "prettier": "^3.2.5",
-    "rimraf": "^5.0.5",
-    "traverse": "^0.6.6"
+    "rimraf": "^5.0.5"
   }
 }
