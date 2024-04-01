@@ -34,7 +34,7 @@
 		"Snippets"
 	],
 	"scripts": {
-    "script:es6": "bun es6.js",
+		"script:es6": "bun es6.js",
 		"clean": "rimraf build dist coverage",
 		"build": "bun run clean && bun build.js && vsce package && mv my-*.vsix dist",
 		"test": "bun test",
