@@ -1,124 +1,97 @@
 /**
- * @author: Raja
- * @description: grunt file for ampalibe extension
+ * @description: gruntfile for ampalibe extension
  * @requires: grunt | load-grunt-tasks | grunt-contrib-compress
  */
 module.exports = function (grunt) {
-	require('load-grunt-tasks')(grunt);
+	require("load-grunt-tasks")(grunt);
 
-	// all files destination (example)
-	const backupsDestination = './backups/';
+	// backups destination
+	const backupsDestination = "./backups/";
 
 	// node-glob syntax
-	const includeAllFiles = ['**/*', '.*/**/*', '**/.*', '**/.*/**/*'];
+	const includeAllFiles = ["**/*", ".*/**/*", "**/.*", "**/.*/**/*"];
 
-	/**
-	 * ~ ALL GRUNT PLUGINS CONFIG ~
-	 */
+	// all grunt plugins config
 	grunt.initConfig({
-		pkg: grunt.file.readJSON('./package.json'),
+		pkg: grunt.file.readJSON("./package.json"),
 
-		/**
-		 * Compress files and folders (incremental backup)
-		 */
+		// compress files and folders (incremental backup)
 		compress: {
 			main: {
 				options: {
-					archive: backupsDestination + 'main.tar.gz',
+					archive: backupsDestination + "main.tar.gz",
 				},
-				files: [{ src: ['./*', './.*'] }],
-				filter: 'isFile',
+				files: [{ src: ["./*", "./.*"] }],
+				filter: "isFile",
 			},
-			node_modules: {
+			vscode: {
 				options: {
-					archive: backupsDestination + 'node_modules.tar.gz',
+					archive: backupsDestination + "vscode.tar.gz",
 				},
 				expand: true,
-				cwd: './node_modules/',
+				cwd: "./.vscode/",
 				src: includeAllFiles,
-				dest: 'node_modules',
-			},
-			src: {
-				options: {
-					archive: backupsDestination + 'src.tar.gz',
-				},
-				expand: true,
-				cwd: './src/',
-				src: includeAllFiles,
-				dest: 'src',
-			},
-			test: {
-				options: {
-					archive: backupsDestination + 'test.tar.gz',
-				},
-				expand: true,
-				cwd: './test/',
-				src: includeAllFiles,
-				dest: 'test',
-			},
-			dist: {
-				options: {
-					archive: backupsDestination + 'dist.tar.gz',
-				},
-				expand: true,
-				cwd: './dist/',
-				src: includeAllFiles,
-				dest: 'dist',
-			},
-			utils: {
-				options: {
-					archive: backupsDestination + 'utils.tar.gz',
-				},
-				expand: true,
-				cwd: './utils/',
-				src: includeAllFiles,
-				dest: 'utils',
+				dest: "vscode",
 			},
 			assets: {
 				options: {
-					archive: backupsDestination + 'assets.tar.gz',
+					archive: backupsDestination + "assets.tar.gz",
 				},
 				expand: true,
-				cwd: './assets/',
+				cwd: "./assets/",
 				src: includeAllFiles,
-				dest: 'assets',
+				dest: "assets",
 			},
-			docs: {
+			src: {
 				options: {
-					archive: backupsDestination + 'docs.tar.gz',
+					archive: backupsDestination + "src.tar.gz",
 				},
 				expand: true,
-				cwd: './docs/',
+				cwd: "./src/",
 				src: includeAllFiles,
-				dest: 'docs',
+				dest: "src",
+			},
+			tests: {
+				options: {
+					archive: backupsDestination + "tests.tar.gz",
+				},
+				expand: true,
+				cwd: "./tests/",
+				src: includeAllFiles,
+				dest: "tests",
+			},
+			tmp: {
+				options: {
+					archive: backupsDestination + "tmp.tar.gz",
+				},
+				expand: true,
+				cwd: "./tmp/",
+				src: includeAllFiles,
+				dest: "tmp",
 			},
 		},
 	});
 
 	// all grunt register tasks
-	grunt.registerTask('compress-all', [
-		'compress:main',
-		'compress:node_modules',
-		'compress:src',
-		'compress:test',
-		'compress:dist',
-		'compress:utils',
-		'compress:assets',
-		'compress:docs',
+	grunt.registerTask("backup", [
+		"compress:main",
+		"compress:vscode",
+		"compress:assets",
+		"compress:src",
+		"compress:tests",
+		"compress:tmp",
 	]);
 
 	// all tasks lists
-	const myTasksNames = ['compress-all'];
-
-	// tasks status (description)
-	const myTasksStatus = [
-		'compress: main | node_modules | src | test | dist | utils | assets | docs',
+	const plumTaskNames = ["backup"];
+	const plumTaskStatus = [
+		"compress: main | vscode | assets | src | tests | tmp",
 	];
 
 	// default tasks
-	grunt.registerTask('default', () => {
+	grunt.registerTask("default", () => {
 		console.log(
-			'\nHere are the lists of plugins (tasks) you can run with grunt:'.green,
+			"\nHere are the lists of plugins (tasks) you can run with grunt:".green,
 		);
 
 		/**
@@ -130,25 +103,25 @@ module.exports = function (grunt) {
 		 */
 		function getTaskResume(taskTitle, taskNames, taskStatus, taskTheme) {
 			switch (taskTheme) {
-				case 'cyan':
+				case "cyan":
 					console.log(`\n${taskTitle}`.cyan.inverse.bold);
 					taskNames.forEach((taskNames, index) => {
 						console.log(taskNames.cyan + ` -> ${taskStatus[index]}`);
 					});
 					break;
-				case 'magenta':
+				case "magenta":
 					console.log(`\n${taskTitle}`.magenta.inverse.bold);
 					taskNames.forEach((taskNames, index) => {
 						console.log(taskNames.magenta + ` -> ${taskStatus[index]}`);
 					});
 					break;
-				case 'yellow':
+				case "yellow":
 					console.log(`\n${taskTitle}`.yellow.inverse.bold);
 					taskNames.forEach((taskNames, index) => {
 						console.log(taskNames.yellow + ` -> ${taskStatus[index]}`);
 					});
 					break;
-				case 'blue':
+				case "blue":
 					console.log(`\n${taskTitle}`.blue.inverse.bold);
 					taskNames.forEach((taskNames, index) => {
 						console.log(taskNames.blue + ` -> ${taskStatus[index]}`);
@@ -163,10 +136,10 @@ module.exports = function (grunt) {
 
 		// task resume
 		getTaskResume(
-			'🍈 AMPALIBE EXTENSION GRUNT TASKS 🍈',
-			myTasksNames,
-			myTasksStatus,
-			'yellow', // color theme
+			"== AMPALIBE EXTENSION TASKS ==",
+			plumTaskNames,
+			plumTaskStatus,
+			"yellow",
 		);
 	});
 };
