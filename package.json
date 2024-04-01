@@ -33,19 +33,20 @@
     "Snippets"
   ],
   "scripts": {
-    "es6": "bun es6.js",
-    "clean": "rimraf build dist coverage",
-    "build": "bun run clean && bun build.js && vsce package && mv plum-*.vsix dist",
-    "eslint": "eslint --config .eslintrc --report-unused-disable-directives --max-warnings 0",
-    "prettier": "prettier --config .prettierrc --write .",
-    "backup": "grunt backup",
-    "pkg-check": "depcheck",
-    "pkg-upgrade": "ncu --interactive --format group --packageManager bun",
-    "versioning": "ungit",
-    "npm-version:major": "npm version major",
-    "npm-version:minor": "npm version minor",
-    "npm-version:patch": "npm version patch",
-    "nvm": "nvm use"
+		"es6": "bun es6.js",
+		"clean": "rimraf build dist coverage",
+		"build": "bun run clean && bun build.js && vsce package && mv ampalibe-*.vsix dist",
+		"test": "bun test",
+		"eslint": "eslint --config .eslintrc --report-unused-disable-directives --max-warnings 0",
+		"prettier": "prettier --config .prettierrc --write .",
+		"backup": "grunt backup",
+		"pkg-check": "depcheck",
+		"pkg-upgrade": "ncu --interactive --format group --packageManager bun",
+		"versioning": "ungit",
+		"npm-version:major": "npm version major",
+		"npm-version:minor": "npm version minor",
+		"npm-version:patch": "npm version patch",
+		"nvm": "nvm use"
   },
   "contributes": {
     "snippets": [
