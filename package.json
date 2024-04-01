@@ -35,7 +35,7 @@
   ],
   "scripts": {
     "script:es6": "bun es6.js",
-    "script:table": "bun table.js",
+    "script:table": "bun table.js > table",
 		"clean": "rimraf build dist coverage",
 		"build": "bun run clean && bun build.js && vsce package && mv ampalibe-*.vsix dist",
 		"test": "bun test",
