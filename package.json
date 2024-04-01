@@ -59,11 +59,13 @@
     "depcheck": "^1.4.7",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
+    "fs": "^0.0.1-security",
     "grunt": "^1.6.1",
     "grunt-contrib-compress": "^2.0.0",
     "load-grunt-tasks": "^5.1.0",
     "npm-check-updates": "^16.14.18",
     "prettier": "^3.2.5",
-    "rimraf": "^5.0.5"
+    "rimraf": "^5.0.5",
+    "traverse": "^0.6.8"
   }
 }
