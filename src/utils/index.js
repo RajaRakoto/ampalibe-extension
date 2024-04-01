@@ -1,4 +1,7 @@
-// table generator
+/**
+ * @description This function generates a table from the data passed to it
+ * @param {Array} data - an array of arrays
+ */
 export function generateTable(data) {
 	let table = `
 <table>
