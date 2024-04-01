@@ -1,34 +1,64 @@
 {
-	"name": "ampalibe",
-	"publisher": "iTeam-S",
-	"displayName": "Ampalibe",
-	"description": "VScode extension for Ampalibe framework",
-	"version": "1.0.5",
-	"type": "module",
-	"icon": "assets/ampalibe-ico.png",
-	"scripts": {
-		"build": "cd utils && node ampalibe.js > ../README.md && cd ..",
-		"build-vsix": "sudo vsce package"
-	},
-	"engines": {
-		"vscode": "^1.49.0"
-	},
-	"categories": [
-		"Snippets"
-	],
-	"contributes": {
-		"snippets": [
-			{
-				"language": "python",
-				"path": "./dist/ampalibe.code-snippets"
-			}
-		]
-	},
-	"devDependencies": {
-		"fs": "^0.0.1-security",
-		"grunt": "^1.5.3",
-		"grunt-contrib-compress": "^2.0.0",
-		"load-grunt-tasks": "^5.1.0",
-		"traverse": "^0.6.6"
-	}
+  "name": "ampalibe",
+  "displayName": "Ampalibe",
+  "version": "1.0.5",
+  "description": "VScode extension for Ampalibe framework 🥝",
+  "publisher": "iTeam-S",
+  "author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
+  "license": "MIT",
+  "icon": "./assets/ampalibe-extension.png",
+  "readme": "./README.md",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajaRakoto/ampalibe-extension.git"
+  },
+  "homepage": "https://github.com/RajaRakoto/ampalibe-extension#readme",
+  "bugs": "https://github.com/RajaRakoto/ampalibe-extension/issues",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "ampalibe",
+    "extension",
+    "vscode",
+    "snippets",
+    "bot",
+    "messenger"
+  ],
+  "engines": {
+    "vscode": "^1.39.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "scripts": {
+    "es6": "bun es6.js",
+    "clean": "rimraf build dist coverage",
+    "build": "bun run clean && bun build.js && vsce package && mv plum-*.vsix dist",
+    "eslint": "eslint --config .eslintrc --report-unused-disable-directives --max-warnings 0",
+    "prettier": "prettier --config .prettierrc --write .",
+    "backup": "grunt backup",
+    "pkg-check": "depcheck",
+    "pkg-upgrade": "ncu --interactive --format group --packageManager bun",
+    "versioning": "ungit",
+    "npm-version:major": "npm version major",
+    "npm-version:minor": "npm version minor",
+    "npm-version:patch": "npm version patch",
+    "nvm": "nvm use"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "python",
+        "path": "./dist/ampalibe-extension.code-snippets"
+      }
+    ]
+  },
+  "devDependencies": {
+    "grunt": "^1.5.3",
+    "grunt-contrib-compress": "^2.0.0",
+    "load-grunt-tasks": "^5.1.0",
+    "traverse": "^0.6.6"
+  }
 }
