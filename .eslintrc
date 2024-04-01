@@ -1,0 +1,24 @@
+{
+  "env": {
+    "browser": false,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  },
+  "extends": [
+    "eslint:recommended",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "files": ["*.{js,cjs,mjs}"]
+    }
+  ],
+  "rules": {
+    "no-unused-vars": "warn"
+  }
+}
