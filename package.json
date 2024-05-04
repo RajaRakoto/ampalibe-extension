@@ -1,7 +1,7 @@
 {
 	"name": "ampalibe-extension",
 	"displayName": "ampalibe",
-	"version": "1.0.0",
+	"version": "1.0.7",
 	"description": "VSCode extension for Ampalibe framework 🥝",
 	"publisher": "iTeam-S",
 	"author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
