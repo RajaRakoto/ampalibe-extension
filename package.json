@@ -1,12 +1,12 @@
 {
-	"name": "ampalibe",
-	"displayName": "Ampalibe",
+	"name": "ampalibe-extension",
+	"displayName": "ampalibe",
 	"version": "1.0.6",
 	"description": "VSCode extension for Ampalibe framework 🥝",
 	"publisher": "iTeam-S",
 	"author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
 	"license": "MIT",
-	"icon": "./assets/ampalibe-extension.png",
+	"icon": "./assets/ampalibe.png",
 	"readme": "./README.md",
 	"type": "module",
 	"repository": {
