@@ -2,7 +2,7 @@
 import fs from "fs";
 import path from "path";
 
-/* src snippets sources */
+/* snippets */
 import { snippets } from "./src";
 
 // ========================================
