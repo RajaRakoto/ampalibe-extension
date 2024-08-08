@@ -11,7 +11,7 @@ function getES6moduleSyntaxBySource(sources, extension) {
 	function exploreDirectory(currentDir, sourcePrefix) {
 		const files = fs.readdirSync(currentDir);
 		let sourceES6 = [];
-		files.forEach((file) => {
+		for (const file of files) {
 			const filePath = path.join(currentDir, file);
 			const stats = fs.statSync(filePath);
 			if (stats.isDirectory()) {
@@ -25,17 +25,18 @@ function getES6moduleSyntaxBySource(sources, extension) {
 					)} } from '${sourcePrefix}/${relativePath}';`,
 				);
 			}
-		});
+		}
 		return sourceES6.join("\n");
 	}
-	if (!Array.isArray(sources)) {
-		sources = [sources];
-	}
+
+	const wrappedSources = Array.isArray(sources) ? sources : [sources];
 	let result = "";
-	sources.forEach((source) => {
+
+	for (const source of wrappedSources) {
 		const sourcePrefix = source.startsWith("./") ? "." : "";
 		result += `${exploreDirectory(source, sourcePrefix)}\n`;
-	});
+	}
+
 	return result;
 }
 
