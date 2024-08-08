@@ -2,7 +2,7 @@
  * @description: gruntfile for vscode boilerplate
  * @requires: grunt | load-grunt-tasks | grunt-contrib-compress
  */
-module.exports = function (grunt) {
+module.exports = (grunt) => {
 	require("load-grunt-tasks")(grunt);
 
 	// backups destination
@@ -19,14 +19,14 @@ module.exports = function (grunt) {
 		compress: {
 			main: {
 				options: {
-					archive: backupsDestination + "main.tar.gz",
+					archive: `${backupsDestination}main.tar.gz`,
 				},
 				files: [{ src: ["./*", "./.*"] }],
 				filter: "isFile",
 			},
 			vscode: {
 				options: {
-					archive: backupsDestination + "vscode.tar.gz",
+					archive: `${backupsDestination}vscode.tar.gz`,
 				},
 				expand: true,
 				cwd: "./.vscode/",
@@ -35,7 +35,7 @@ module.exports = function (grunt) {
 			},
 			assets: {
 				options: {
-					archive: backupsDestination + "assets.tar.gz",
+					archive: `${backupsDestination}assets.tar.gz`,
 				},
 				expand: true,
 				cwd: "./assets/",
@@ -44,7 +44,7 @@ module.exports = function (grunt) {
 			},
 			src: {
 				options: {
-					archive: backupsDestination + "src.tar.gz",
+					archive: `${backupsDestination}src.tar.gz`,
 				},
 				expand: true,
 				cwd: "./src/",
@@ -53,7 +53,7 @@ module.exports = function (grunt) {
 			},
 			tests: {
 				options: {
-					archive: backupsDestination + "tests.tar.gz",
+					archive: `${backupsDestination}tests.tar.gz`,
 				},
 				expand: true,
 				cwd: "./tests/",
@@ -62,7 +62,7 @@ module.exports = function (grunt) {
 			},
 			tmp: {
 				options: {
-					archive: backupsDestination + "tmp.tar.gz",
+					archive: `${backupsDestination}tmp.tar.gz`,
 				},
 				expand: true,
 				cwd: "./tmp/",
@@ -106,25 +106,25 @@ module.exports = function (grunt) {
 				case "cyan":
 					console.log(`\n${taskTitle}`.cyan.inverse.bold);
 					taskNames.forEach((taskNames, index) => {
-						console.log(taskNames.cyan + ` -> ${taskStatus[index]}`);
+						console.log(`${taskNames.cyan} -> ${taskStatus[index]}`);
 					});
 					break;
 				case "magenta":
 					console.log(`\n${taskTitle}`.magenta.inverse.bold);
 					taskNames.forEach((taskNames, index) => {
-						console.log(taskNames.magenta + ` -> ${taskStatus[index]}`);
+						console.log(`${taskNames.magenta} -> ${taskStatus[index]}`);
 					});
 					break;
 				case "yellow":
 					console.log(`\n${taskTitle}`.yellow.inverse.bold);
 					taskNames.forEach((taskNames, index) => {
-						console.log(taskNames.yellow + ` -> ${taskStatus[index]}`);
+						console.log(`${taskNames.yellow} -> ${taskStatus[index]}`);
 					});
 					break;
 				case "blue":
 					console.log(`\n${taskTitle}`.blue.inverse.bold);
 					taskNames.forEach((taskNames, index) => {
-						console.log(taskNames.blue + ` -> ${taskStatus[index]}`);
+						console.log(`${taskNames.blue} -> ${taskStatus[index]}`);
 					});
 					break;
 

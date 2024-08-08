@@ -1,5 +1,5 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 
 // ========================================
 
@@ -9,7 +9,7 @@ function getES6moduleSyntaxBySource(sources, extension) {
 	const dropRight = (arr, n = 1) => arr.slice(0, -n);
 
 	function exploreDirectory(currentDir, sourcePrefix) {
-		let files = fs.readdirSync(currentDir);
+		const files = fs.readdirSync(currentDir);
 		let sourceES6 = [];
 		files.forEach((file) => {
 			const filePath = path.join(currentDir, file);
@@ -34,7 +34,7 @@ function getES6moduleSyntaxBySource(sources, extension) {
 	let result = "";
 	sources.forEach((source) => {
 		const sourcePrefix = source.startsWith("./") ? "." : "";
-		result += exploreDirectory(source, sourcePrefix) + "\n";
+		result += `${exploreDirectory(source, sourcePrefix)}\n`;
 	});
 	return result;
 }

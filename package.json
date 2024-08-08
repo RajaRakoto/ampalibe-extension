@@ -15,9 +15,7 @@
 	},
 	"homepage": "https://github.com/RajaRakoto/vscode-boilerplate#readme",
 	"bugs": "https://github.com/RajaRakoto/vscode-boilerplate/issues",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"keywords": [
 		"extension",
 		"vscode",
@@ -30,9 +28,7 @@
 	"engines": {
 		"vscode": "^1.39.0"
 	},
-	"categories": [
-		"Snippets"
-	],
+	"categories": ["Snippets"],
 	"scripts": {
 		"script:es6": "bun es6.js",
 		"clean": "rimraf build dist coverage",
