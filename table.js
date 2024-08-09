@@ -11,19 +11,20 @@ const prefixList = [];
 const bodyList = [];
 const descriptionList = [];
 
-const parsedData = JSON.parse(
-	fs.readFileSync("./dist/ampalibe-extension.code-snippets", "utf8"),
-);
-
-for (const item of traverse(parsedData)) {
-	if (item.key === "prefix") {
-		prefixList.push(item.value);
-	} else if (item.key === "body") {
-		bodyList.push(item.value);
-	} else if (item.key === "description") {
-		descriptionList.push(item.value);
+// biome-ignore lint/complexity/noForEach: traverse is a library that doesn't support for of loop
+traverse(
+	JSON.parse(
+		fs.readFileSync("./dist/ampalibe-extension.code-snippets", "utf8"),
+	),
+).forEach(function (e) {
+	if (this.key === "prefix") {
+		prefixList.push(e);
+	} else if (this.key === "body") {
+		bodyList.push(e);
+	} else if (this.key === "description") {
+		descriptionList.push(e);
 	}
-}
+});
 
 console.log(
 	generateTable([
