@@ -63,6 +63,7 @@
 		"grunt-contrib-compress": "^2.0.0",
 		"load-grunt-tasks": "^5.1.0",
 		"npm-check-updates": "^17.0.6",
-		"rimraf": "^6.0.1"
+		"rimraf": "^6.0.1",
+		"traverse": "^0.6.9"
 	}
 }
