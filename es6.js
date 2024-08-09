@@ -1,5 +1,5 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 
 // ========================================
 
@@ -9,9 +9,9 @@ function getES6moduleSyntaxBySource(sources, extension) {
 	const dropRight = (arr, n = 1) => arr.slice(0, -n);
 
 	function exploreDirectory(currentDir, sourcePrefix) {
-		let files = fs.readdirSync(currentDir);
+		const files = fs.readdirSync(currentDir);
 		let sourceES6 = [];
-		files.forEach((file) => {
+		for (const file of files) {
 			const filePath = path.join(currentDir, file);
 			const stats = fs.statSync(filePath);
 			if (stats.isDirectory()) {
@@ -25,17 +25,18 @@ function getES6moduleSyntaxBySource(sources, extension) {
 					)} } from '${sourcePrefix}/${relativePath}';`,
 				);
 			}
-		});
+		}
 		return sourceES6.join("\n");
 	}
-	if (!Array.isArray(sources)) {
-		sources = [sources];
-	}
+
+	const wrappedSources = Array.isArray(sources) ? sources : [sources];
 	let result = "";
-	sources.forEach((source) => {
+
+	for (const source of wrappedSources) {
 		const sourcePrefix = source.startsWith("./") ? "." : "";
-		result += exploreDirectory(source, sourcePrefix) + "\n";
-	});
+		result += `${exploreDirectory(source, sourcePrefix)}\n`;
+	}
+
 	return result;
 }
 

@@ -1,6 +1,6 @@
 /* libs */
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 
 /* src snippets sources */
 import { basic } from "./src/basic.js";
