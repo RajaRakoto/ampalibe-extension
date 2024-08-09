@@ -1,38 +1,43 @@
 {
-	"name": "my-extension",
-	"displayName": "My extension",
-	"version": "1.0.0",
-	"description": "Minimalistic boilerplate to quick-start VSCode Extension development 🚀",
-	"publisher": "raja",
+	"name": "ampalibe",
+	"displayName": "ampalibe",
+	"version": "1.0.7",
+	"description": "VSCode extension for Ampalibe framework 🥝",
+	"publisher": "iTeam-S",
 	"author": "Raja Rakotonirina <raja.rakoto7@gmail.com>",
 	"license": "MIT",
-	"icon": "./assets/vscode-extension.png",
+	"icon": "./assets/ampalibe.png",
 	"readme": "./README.md",
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RajaRakoto/vscode-boilerplate.git"
+		"url": "git+https://github.com/RajaRakoto/ampalibe-extension.git"
 	},
-	"homepage": "https://github.com/RajaRakoto/vscode-boilerplate#readme",
-	"bugs": "https://github.com/RajaRakoto/vscode-boilerplate/issues",
-	"files": ["dist"],
+	"homepage": "https://github.com/RajaRakoto/ampalibe-extension#readme",
+	"bugs": "https://github.com/RajaRakoto/ampalibe-extension/issues",
+	"files": [
+		"dist"
+	],
 	"keywords": [
+		"ampalibe",
 		"extension",
 		"vscode",
-		"javascript",
-		"minimalist",
-		"boilerplate",
-		"template",
-		"starter"
+		"snippets",
+		"bot",
+		"chatbot",
+		"messenger"
 	],
 	"engines": {
 		"vscode": "^1.39.0"
 	},
-	"categories": ["Snippets"],
+	"categories": [
+		"Snippets"
+	],
 	"scripts": {
 		"script:es6": "bun es6.js",
+		"script:table": "bun table.js > table",
 		"clean": "rimraf build dist coverage",
-		"build": "bun run clean && bun build.js && vsce package && mv my-*.vsix dist",
+		"build": "bun run clean && bun build.js && vsce package && mv ampalibe-*.vsix dist",
 		"test": "bun test",
 		"biome:start": "biome start",
 		"biome:stop": "biome stop",
@@ -50,12 +55,8 @@
 	"contributes": {
 		"snippets": [
 			{
-				"language": "javascript",
-				"path": "./dist/my-extension.code-snippets"
-			},
-			{
-				"language": "typescript",
-				"path": "./dist/my-extension.code-snippets"
+				"language": "python",
+				"path": "./dist/ampalibe-extension.code-snippets"
 			}
 		]
 	},

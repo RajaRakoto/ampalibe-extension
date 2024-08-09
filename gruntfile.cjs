@@ -1,5 +1,5 @@
 /**
- * @description: gruntfile for vscode boilerplate
+ * @description: gruntfile for ampalibe extension
  * @requires: grunt | load-grunt-tasks | grunt-contrib-compress
  */
 module.exports = (grunt) => {
