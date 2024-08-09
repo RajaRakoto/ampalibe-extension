@@ -39,8 +39,10 @@
 		"clean": "rimraf build dist coverage",
 		"build": "bun run clean && bun build.js && vsce package && mv ampalibe-*.vsix dist",
 		"test": "bun test",
-		"eslint": "eslint --config .eslintrc --report-unused-disable-directives --max-warnings 0",
-		"prettier": "prettier --config .prettierrc --write .",
+		"biome:start": "biome start",
+		"biome:stop": "biome stop",
+		"biome:fix": "biome check --fix .",
+		"biome:unsafe": "biome check --fix --unsafe .",
 		"backup": "grunt backup",
 		"pkg-check": "depcheck",
 		"pkg-upgrade": "ncu --interactive --format group --packageManager bun",
@@ -59,16 +61,12 @@
 		]
 	},
 	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
 		"depcheck": "^1.4.7",
-		"eslint": "^8.57.0",
-		"eslint-config-prettier": "^9.1.0",
-		"fs": "^0.0.1-security",
 		"grunt": "^1.6.1",
 		"grunt-contrib-compress": "^2.0.0",
 		"load-grunt-tasks": "^5.1.0",
-		"npm-check-updates": "^16.14.18",
-		"prettier": "^3.2.5",
-		"rimraf": "^5.0.5",
-		"traverse": "^0.6.8"
+		"npm-check-updates": "^17.0.6",
+		"rimraf": "^6.0.1"
 	}
 }
