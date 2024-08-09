@@ -1,29 +1,29 @@
 /* libs */
 import traverse from "traverse";
-import fs from "fs";
+import fs from "node:fs";
 
 /* utils */
 import { generateTable } from "./src/utils/index.js";
 
 // ===============================
 
-let prefixList = [];
-let bodyList = [];
-let descriptionList = [];
+const prefixList = [];
+const bodyList = [];
+const descriptionList = [];
 
-traverse(
-	JSON.parse(
-		fs.readFileSync("./dist/ampalibe-extension.code-snippets", "utf8"),
-	),
-).forEach(function (e) {
-	if (this.key == "prefix") {
-		prefixList.push(e);
-	} else if (this.key == "body") {
-		bodyList.push(e);
-	} else if (this.key == "description") {
-		descriptionList.push(e);
+const parsedData = JSON.parse(
+	fs.readFileSync("./dist/ampalibe-extension.code-snippets", "utf8"),
+);
+
+for (const item of traverse(parsedData)) {
+	if (item.key === "prefix") {
+		prefixList.push(item.value);
+	} else if (item.key === "body") {
+		bodyList.push(item.value);
+	} else if (item.key === "description") {
+		descriptionList.push(item.value);
 	}
-});
+}
 
 console.log(
 	generateTable([

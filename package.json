@@ -15,9 +15,7 @@
 	},
 	"homepage": "https://github.com/RajaRakoto/ampalibe-extension#readme",
 	"bugs": "https://github.com/RajaRakoto/ampalibe-extension/issues",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"keywords": [
 		"ampalibe",
 		"extension",
@@ -30,9 +28,7 @@
 	"engines": {
 		"vscode": "^1.39.0"
 	},
-	"categories": [
-		"Snippets"
-	],
+	"categories": ["Snippets"],
 	"scripts": {
 		"script:es6": "bun es6.js",
 		"script:table": "bun table.js > table",
